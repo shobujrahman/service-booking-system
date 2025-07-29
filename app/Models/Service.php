@@ -14,4 +14,10 @@ class Service extends Model
         'price',
         'status',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
 }
