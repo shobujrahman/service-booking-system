@@ -10,8 +10,6 @@ class BookingController extends Controller
 {
     public function index()
     {
-
-        // Alternatively, you can use:
         return Booking::where('user_id', Auth::id())->with(['user', 'service'])->get();
 
     }
